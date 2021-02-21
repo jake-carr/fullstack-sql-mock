@@ -17,11 +17,13 @@ const helpers = {
     })
   },
 
-  update: (id, body, callback) => {
-    const {item, min_cost, curr_bid, ends_in, img} = body;
-    // only need to write SET once
-    let q = `UPDATE stock SET item = '${item}', min_cost = ${min_cost}, curr_bid = ${curr_bid}, ends_in = ${ends_in}, img = '${img}' WHERE id = ${id}`
+  update: (id, bid, callback) => {
+    // const {item, min_cost, curr_bid, ends_in, img} = body;
+    // // only need to write SET once for multiple
+    // let q = `UPDATE stock SET item = '${item}', min_cost = ${min_cost}, curr_bid = ${curr_bid}, ends_in = ${ends_in}, img = '${img}' WHERE id = ${id}`
 
+    // only need to update BID for this actually
+    let q = `UPDATE stock SET curr_bid = ${bid} WHERE id = ${id}`
     db.query(q, (err) => {
       callback(err)
     })

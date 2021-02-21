@@ -14,8 +14,7 @@ const controller = {
     })
   },
   put: (req, res) => {
-    console.log('id', req.params.id, 'b', req.body)
-    helpers.update(req.params.id, req.body, (err) => {
+    helpers.update(req.params.id, req.body.curr_bid, (err) => {
       err ? res.status(400).send(err) : res.status(200).send('updated')
     })
   },
