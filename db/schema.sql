@@ -14,3 +14,10 @@ CREATE TABLE stock (
   PRIMARY KEY (id)
 );
 
+CREATE TABLE users (
+  id INT AUTO_INCREMENT NOT NULL,
+  username VARCHAR(255) NOT NULL,
+  password VARCHAR(255) NOT NULL,
+  PRIMARY KEY (id)
+)
+

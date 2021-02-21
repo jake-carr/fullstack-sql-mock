@@ -36,18 +36,46 @@ const insertMockData = function() {
   let list = createProducts();
   for (let product of list) {
     db.query(`INSERT INTO stock (item, min_cost, curr_bid, ends_in, img) VALUES ('${product.item}', ${product.min_cost}, ${product.curr_bid}, ${Number(product.ends_in)}, '${product.image}')`, (err) => {
-      err ? console.log('err', err) : console.log('seeded')
+      err ? console.log('err', err) : console.log('seeded ', product.item)
+    })
+  }
+};
+
+
+// same thing for seeding some users
+const prefixes = ['@', '#', '!', "_"];
+const names = ['weilly', 'chris', 'justine', 'joshhertz', 'jonathim', 'hyungjooyoon', 'ZACH', 'canthinkofname'];
+const passwords = ['pass', 'passwordZ', 'word', 'cool', 'secure', 'unhackable']
+
+const randomUser = () => {
+  let product = {};
+  product.username = `${prefixes[Math.floor(Math.random() * Math.floor(prefixes.length))]}${names[Math.floor(Math.random() * Math.floor(names.length))]}`;
+  function getRandomInt(max) {
+    return Math.floor(Math.random() * Math.floor(max));
+  }
+  product.password = `${passwords[Math.floor(Math.random() * Math.floor(passwords.length))]}${getRandomInt(10)}${passwords[Math.floor(Math.random() * Math.floor(passwords.length))]}`
+  return product
+};
+
+const createUsers = () => {
+  let usersArr = [];
+  for(let i = 0; i < 5; i++){
+    usersArr.push(randomUser())
+  }
+  return usersArr
+}
+
+const insertMockUsers = function() {
+  let list = createUsers();
+  for (let u of list) {
+    db.query(`INSERT INTO users (username, password) VALUES ('${u.username}', '${u.password}')`, (err) => {
+      err ? console.log('err', err) : console.log('seeded ', u.username)
     })
   }
 };
 
 insertMockData();
-
-// item VARCHAR(255) NOT NULL,
-//   min_cost FLOAT(2) NOT NULL,
-//   curr_bid FLOAT(2),
-//   ends_in INT NOT NULL,
-//   img VARCHAR(255),
+insertMockUsers();
 
 // NOTE: DO NOT invoke this function as part of your
 // server code - it is meant to only be run once so that
