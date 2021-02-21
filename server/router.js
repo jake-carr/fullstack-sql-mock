@@ -5,8 +5,12 @@ const controller = require('./controller.js');
 
 router
   .route('/products')
-  .get(controller.get)
+  .get(controller.getProducts)
   .post(controller.post)
+
+router
+  .route('/users')
+  .get(controller.getUsers)
 
 router
   .route('/products/:id')

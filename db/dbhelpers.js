@@ -2,8 +2,14 @@
 const db = require('./index.js');
 
 const helpers = {
-  get: (callback) => {
+  getProducts: (callback) => {
     let q = `SELECT * FROM stock`;
+    db.query(q, (err, res) => {
+      callback(err, res)
+    })
+  },
+  getUsers: (callback) => {
+    let q = `SELECT * FROM users`;
     db.query(q, (err, res) => {
       callback(err, res)
     })

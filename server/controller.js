@@ -3,8 +3,13 @@
 const helpers = require('../db/dbhelpers.js')
 
 const controller = {
-  get: (req, res) => {
-    helpers.get((err, result) => {
+  getProducts: (req, res) => {
+    helpers.getProducts((err, result) => {
+      err ? res.status(400).send(err) : res.status(200).json(result)
+    })
+  },
+  getUsers: (req, res) => {
+    helpers.getUsers((err, result) => {
       err ? res.status(400).send(err) : res.status(200).json(result)
     })
   },
