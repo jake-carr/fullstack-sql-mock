@@ -3,7 +3,7 @@ import ProductList from './ProductList';
 import ProductViewer from './ProductViewer';
 import Search from './Search';
 import Login from './Login';
-
+import NewProductForm from './NewProductForm';
 import axios from 'axios';
 
 export default class App extends React.Component {
@@ -78,6 +78,7 @@ export default class App extends React.Component {
         <div>
           <p>Hello {this.state.user}</p>
           <button onClick={this.logout}>Log out</button>
+          <NewProductForm fetch={this.getProducts} username={this.state.user} />
         </div>
         : <Login logInAs={this.loginSuccess} />}
 

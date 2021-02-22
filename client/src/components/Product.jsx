@@ -10,8 +10,9 @@ const Product = (props) => {
 
   return (
     <div className='product-list-entry' onClick={() => choose(idx)}>
-      <span>NAME: {item}</span>
-      <span>ENDS in: {ends_in}</span>
+      <span>Name: {item} • </span>
+      <span>Current bid: ${curr_bid} • </span>
+      <span>Ends in: {ends_in} hours</span>
     </div>
   )
 }

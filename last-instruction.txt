@@ -1,0 +1,15 @@
+## Last Instruction
+  - [ ] Write a set of instructions for the next developer to be able to start up and run your code. For example, do you have any scripts or seeding functions needed to be run for the application to work?
+
+Instructions For Next Developer
+1. Make sure MYSQL credentials in db/index.js are correct for your machine.
+2. Run mysql -u root -p < db/schema.sql once to create the database & its 2 tables.
+3. Run seed.js once to fill the stock table with 10 random products and the user table with 5 random pairs of username/passwords.
+4. npm start starts the express server.
+5. npm build runs webpack with the --watch flag.
+6. Log in from the front end using any of the seeded user credentials.
+
+
+Congratualations, you completed your mock exam. With the completion of this, you should now have an idea of where you lack understanding. Take about 10 mins to write a list for yourself about what you struggled with most on and what you felt most confident about. Review the areas you had the most trouble with and start building simpler full-stack applications while trying to focus on those weaker points so you can familiarize yourself with that aspect.
+
+// I thought this was pretty straightforward since we didn't have to do any JOINS or back-end filtering. I'm going to practice those for a little while longer in case either shows up on the actual exam. Also didn't bother getting to CSS on this one, but if I have spare time on the actual assessment, I have some loose ideas on how to make it prettier, such as adding css effects/cursor change on hover, putting borders around the different components and placing them in a more organized fashion (probably using what little I know of flex box), and making sure the text labels for everything are consistent accross the app

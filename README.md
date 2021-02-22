@@ -22,7 +22,7 @@ If possible, do your best to emulate the environment in which you will be taking
  - You don't have to make commits for this since it is purly meant to be a full stack practice, but remember that you will have to make frequent commits during the real TA. Just keep this in mind as I'm sure you all don't commit as frequently as you should. If you want to practice writing clean commits as well, work on this from a forked and cloned repo.
 
  - There are more instructions after the step-by-step instructions for the application. Once you completed the mock exam/run out of time, please scroll down and read the remaining instructions
- 
+
  * If you would like, globally install an npm package called ["timestampnotes"]. The way it works is you run the program by typing "timestamp" into your terminal. Now, you can type a "commit message" and hit enter; this will store a time stampped note. Once you're finished, you can exit by using control+c on mac (sorry Windows users, I dont know what it would be...maybe control+c?). Once you exit, you can now right-click and paste/command+v/control+v to anywhere to see all your timestamped notes for this current session.
 
  - Good Luck! :)
@@ -45,7 +45,7 @@ Being the amazing engineer you are, you break down the provided specs into the f
   3. In the path [/db/models.js] OR [/db/schema.sql] write a schema for Products that includes the necessary keys.
   4. In the path [/db/seed.js] write code that will seed the database with at least 10 random products (a random product generator has been provided. You will not need to modify it other than where the comment prompts you to write code)
   5. In the path [/db/dbhelpers.js] write code to handle your database queries (make sure they are connected to your server so that with postman, each request works the way they should)
-  
+
   Now that your server and database is hooked up, move on to the front-end
 
   6. Build out your front end so that minimally, it behaves like the following:
@@ -58,15 +58,15 @@ Being the amazing engineer you are, you break down the provided specs into the f
       - [ ] on page load - make sure that 10 products render on the side, and one product renders in the product view.
       - [ ] view product - implement a click function that allows the client to click and view the details for each product
       - [ ] bidding - make sure a user can bid on a product so that their current bid updates it
-  
+
   6. Let's go a few steps further. Refactor your code to implement the following
-  
+
     - [ ] search - implement a search functionality so that a product you search for is rendered into the product view (you may take creative liberties for how your search algorithm works. hint: filter?)
     - [ ] add another schema for users that holds username, password as columns (remember what you've learned, this is NOT secure)
     - [ ] using the already existing product generator as reference, write a random user generator to generate at least 3 users
-    - [ ] log-in form - have a simple log-in form in the top that the client can use to sign-in 
+    - [ ] log-in form - have a simple log-in form in the top that the client can use to sign-in
       - once signed in, a button should conditionally render. on click, a user should be able to add a new product to the database
-      - exercise your freedom and implement a new product form in whatever way you see fit. 
+      - exercise your freedom and implement a new product form in whatever way you see fit.
         + If you want the practice, think about how you can build a modal! (don't know what that is? google it)
 
 
